@@ -14,7 +14,6 @@ public class SecondActivity extends AppCompatActivity {
 
     TextView txtVUser;
     Button Logout;
-    SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +22,8 @@ public class SecondActivity extends AppCompatActivity {
 
         txtVUser = (TextView) findViewById(R.id.txtV_User);
         Logout = (Button) findViewById(R.id.btnLogout);
-        preferences = (getPreferences(Context.MODE_PRIVATE));
 
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         String user = preferences.getString("username","");
 
         txtVUser.setText(user);
