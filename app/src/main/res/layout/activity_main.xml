@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.panares.labquiz12072017.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@android:dimen/app_icon_size"
+        android:layout_height="48dip"
+        app:srcCompat="@android:drawable/ic_lock_lock"
+        android:layout_marginTop="73dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/etUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etUser"
+        android:layout_alignStart="@+id/etUser"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnRemMe"
+        android:layout_width="180dip"
+        android:layout_height="48dip"
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_below="@+id/etPass"
+        android:layout_marginTop="63dp"
+        android:text="Remember Me"
+        android:onClick="rememberMe"/>
+
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnRemMe"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_toEndOf="@+id/btnRemMe"
+        android:layout_toRightOf="@+id/btnRemMe"
+        android:text="Login"
+        android:onClick="login"/>
+
+</RelativeLayout>
