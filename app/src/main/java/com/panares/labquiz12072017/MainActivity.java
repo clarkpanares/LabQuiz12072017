@@ -37,33 +37,6 @@ public class MainActivity extends AppCompatActivity {
         btn_Login = (Button) findViewById(R.id.btnLogin);
         preferences = (getPreferences(Context.MODE_PRIVATE));
 
-        et_user.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before,
-                                      int count) {
-
-            }
-
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count,
-                                          int after) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                String user = preferences.getString("username","");
-                String pwd = preferences.getString("password","");
-
-                if (user.equals(et_user.getText())){
-                    et_pass.setText(pwd);
-                    et_pass.setBackgroundColor(Color.YELLOW);
-                }
-                else{
-                    et_pass.setBackgroundColor(Color.WHITE);
-                }
-            }
-        });
 
     }
 
